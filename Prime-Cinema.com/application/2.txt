@@ -1,0 +1,138 @@
+<content id="content">
+    <h2>Інформація з файлу</h2>
+    <p>
+        <?php
+        $file = fopen("data/lab2.txt","r");
+        //$data=array();    
+        if(!file)
+            {
+                echo("Помилка відкриття файлу");
+                exit();
+            }
+        else
+            {
+            $i=0;
+            while( !feof($file) )
+                {
+                    $buff = fgetss ($file,1200);
+                    $temp = explode("\t",$buff);
+                                      
+                    foreach($temp as $key=>$value) {
+                        $a = explode("-",$value);
+                        $data[$i][array_shift($a)] = array_pop($a);
+                    }
+                $i++;
+                } 
+            
+            foreach($data as $key=>$value) 
+                {
+                foreach($value as $key1=>$value1) 
+                    {
+                    print $key1."&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;".$value1."<br>";
+                    }
+                print "<br>";    
+                }
+            
+            
+            
+            print "<table>";
+            print "<tr>";
+            foreach($data[0] as $key=>$value1) 
+                    {
+                    print "<td>{$key}</td>";
+                    }
+            print "</tr>";
+            foreach($data as $value) 
+                {
+                print "<tr>";
+                foreach($value as $value1) 
+                    {
+                    print "<td>{$value1}</td>";
+                    }
+                print "</tr>";  
+                }
+            print "</table>";
+            
+            }
+        fclose ( $file );
+        ?>
+    </p>
+                
+    <h2>Запис у файл</h2>
+    <form id="file_form" action="php/action.php" method="post">
+    
+        <table class="table_form">
+            <tr>
+                <td>
+                    Назва Факультету
+                </td>
+                <td>
+                    <input  type="text" pattern="^[А-Яа-яЇїЄєІі\s]+$" name="name_f" class="one_input" required>
+                </td>
+            </tr>
+            <tr>
+                <td>   
+                    Дата заснування
+                </td>
+                <td>
+                    <input type="date" name="date" class="one_input" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Кількість студентів
+                </td>
+                <td>
+                    <input type="number" name="number" class="one_input" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Декан
+                </td>
+                <td>
+                    <input type="text" pattern="[А-ЯЇІЄ][а-яїіє]+$" name="surname" id="Surname" value="Прізвище"  required>
+                    <input type="text" pattern="[А-ЯЇІЄ][.][А-ЯЇІЄ][.]|[А-ЯЇІЄ][-][А-ЯЇІЄ][.][А-ЯЇІЄ][.]" name="name" id="Name" value="Ініціали" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Адреса
+                </td>
+                <td>
+                    <input type="text" pattern="[А-ЯЇІЄа-яїіє\s-]+$" name="street" id="Street" value="Вулиця" required>
+                    <input type="text" pattern="[0-9]{1,4}[а-яїіє]{0,1}" name="house" id="House" value="Будинок" required>
+                </td>
+            </tr>
+            
+            
+        </table> 
+             
+                
+        <script>
+            Surname.onfocus = function() {
+                document.getElementById('Surname').value='';
+                    };
+            Name.onfocus = function() {
+                document.getElementById('Name').value='';
+                    };
+            Street.onfocus = function() {
+                document.getElementById('Street').value='';
+                    };
+            House.onfocus = function() {
+                document.getElementById('House').value='';
+                    };
+            
+            function clean(){
+                document.getElementById('Surname').value='';
+                document.getElementById('Name').value='';
+                document.getElementById('Street').value='';
+                document.getElementById('House').value='';
+            };
+        </script>
+                    
+        <input type="submit" class="button_lab2" id="submit" name="submit" value="Доповнити">
+        <input  class="button_lab2" name="clean" value="Стерти" type="reset" onclick="clean()">
+    </form>
+</content>
+ 

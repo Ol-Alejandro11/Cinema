@@ -1,0 +1,8 @@
+tr td {
+    border: 2px solid blue;
+    padding: 5px;
+}
+.searchBlock {
+    width: 40%;
+    background: blue;
+}

@@ -1,0 +1,227 @@
+/*------------------------------lab2-----------------------------*/
+#cinemaTable tr td {
+    border: 2px solid blue;
+    padding: 5px;
+    margin-bottom: 15px;
+}
+.modal_body {
+    float: left;
+}
+
+.form_align {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 25%;
+    height: 30%;
+    margin: auto;
+
+    text-align: center;
+    float: left; 
+}
+.field{
+	
+    clear: both; 
+    text-align:right;
+    line-height:25px;
+    
+} 
+label {
+    float: left;
+    padding-right:10px;
+}
+button.submit, button.reset {
+	background-color: #68b12f;
+	background: linear-gradient(top, #68b12f, #50911e);
+	border: 1px solid #509111;
+	border-bottom: 1px solid #5b992b;
+	border-radius: 3px;
+	box-shadow: inset 0 1px 0 0 #9fd574;
+	color: white;
+	font-weight: bold;
+	padding: 6px 20px;
+	text-align: center;
+	text-shadow: 0 -1px 0 #396715;
+}
+button.submit:hover, button.reset:hover {
+	opacity:.85;
+	cursor: pointer; 
+}
+button.submit:active, button.reset:active{
+	border: 1px solid #20911e;
+	box-shadow: 0 0 10px 5px #356b0b inset; 
+	
+}
+
+
+
+.modal-header h2 {
+    color: #555;  
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 1;    
+    margin: 0;
+}
+
+.modal .btn-close {
+    color: #aaa;
+    cursor: pointer;
+    font-size: 30px;
+    text-decoration: none;
+    position: absolute;
+    right: 5px;
+    top: 0;
+}
+.modal .btn-close:hover {
+    color: red;
+}
+
+.modal-wrap:before {
+    content: "";
+    display: none;
+    background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 101;
+}
+.modal-overlay {
+    bottom: 0;
+    display: none;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 102;
+}
+
+.modal-open:checked ~ .modal-wrap:before,
+.modal-open:checked ~ .modal-wrap .modal-overlay {
+    display: block;
+}
+.modal-open:checked ~ .modal-wrap .modal-dialog {
+    -webkit-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    -o-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    top: 20%;
+}
+
+.modal-dialog {
+    background: #fefefe;
+    border: #c6c6c6 solid 3px;
+    border-radius: 15px;
+    position: fixed;
+    left: 50%;
+    top: -100%;
+    -webkit-transform: translate(-50%, -500%);
+    -ms-transform: translate(-50%, -500%);
+    -o-transform: translate(-50%, -500%);
+    transform: translate(-50%, -500%);
+    -webkit-transition: -webkit-transform 0.4s ease-out;
+    -moz-transition: -moz-transform 0.4s ease-out;
+    -o-transition: -o-transform 0.4s ease-out;
+    transition: transform 0.4s ease-out;
+    width: 80%;
+    max-width: 500px;
+    z-index: 103;
+}
+.modal-body {
+  padding: 20px;
+}
+.modal-body p {
+    margin: 0;
+}
+.modal-header,
+.modal-footer {
+    padding: 20px 20px;
+}
+.modal-header {
+    border-bottom: #eaeaea solid 1px;
+}
+.modal-header h2 {
+    font-size: 20px;
+    margin: 0;
+}
+.modal-footer {
+    border-top: #eaeaea solid 1px;
+    text-align: right;
+}
+
+.modal-body img { 
+    max-width: 100%;
+    height: auto;
+}
+
+.btn {
+    background: #c6c6c6;
+    border: #c6c6c6 solid 2px;
+    border-radius: 3px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    padding: 8px 15px;
+    text-decoration: none;
+    text-align: center;
+    min-width: 60px;
+    position: relative;
+    float: inherit;
+}
+.btn:hover, .btn:focus {
+    background: #f0f0f0;
+}
+.btn-primary {
+    background: #428bca;
+    border-color: #357ebd;
+    color: #fff;
+}
+.btn-primary:hover{
+    background: #66A1D3;
+}
+
+
+.textbox{
+    height:45px;
+    width:100%;
+    border-radius:3px;
+    border:rgba(0,0,0,.3) 1px solid;
+    box-sizing:border-box;
+    font-size:14px; 
+    padding:8px;
+    margin-bottom:20px;  
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+}
+#serial_id , #year, #road{
+	width: 40%;
+}
+#name, #model, #price{
+	width: 59%;
+}
+,
+.textbox:focus{
+    outline:none;
+    border:rgba(24,149,215,1) 1px solid;
+    color: balck;
+}
+
+
+.btn-form{
+    width:100%;
+    height:45px;  
+    border:rgba(0,0,0,.2) 1px solid;
+    box-sizing:border-box;
+    background: #dedede;
+    color:#555;
+    transition:background .4s;
+}
+
+.btn-form:hover{
+    background: #f2f2f2;
+}
+#btnAdd{
+	text-align: center;
+}

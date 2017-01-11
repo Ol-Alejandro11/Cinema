@@ -1,0 +1,219 @@
+/*Inport font*/
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display&subset=latin,cyrillic);
+
+/*Reset CSS*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*CSS to main page*/
+
+#header {
+    width: 100%;
+    height: 100px;
+    border-bottom: 2px double silver;
+    background-color: #172e4a;
+    color: blue;
+    text-align: center;
+    font-size: 1.3 em;
+    font-family: cursive;
+}
+
+#logo {
+    width: 15%;
+    height: 100px;
+    float: left;
+}
+/*Horizontal menu*/
+#horizontal_menu {
+    width: 80%;
+    height: 100%;
+    float: right;
+}
+
+#horizontal_menu ul li {
+    float: left;
+    position: relative;
+}
+
+#horizontal_menu ul li a {
+    color: #fff;
+    padding: 0 25px;
+    font-family: Playfair;
+    font-size: 25px;
+    text-decoration: none;
+    line-height: 100px;
+    display: block;
+    height: 75px;
+}
+
+#horizontal_menu ul li a:hover {
+    background-color: #436280;
+    color: #fff;
+    width: auto;
+    text-decoration: underline;
+}
+
+#horizontal_menu .dropdown {
+    position: absolute;
+    top: 100%;
+    width: auto;
+    background: #2700ff;;
+    display:none;
+    z-index: 1;
+}
+
+#horizontal_menu li:hover .dropdown {
+    display: block;
+}
+#outer_block {
+    background: #345174;
+}
+#inner_block {
+    background:#f0e3e3;
+    border: 2px solid yellow;
+    border-radius: 2px;
+    width: 90%;
+     margin: 0 auto;
+}
+.scrollup{
+    width:40px;
+    height:40px;
+    opacity:0.3;
+    position:fixed;
+    bottom:100px;
+    right:12px;
+    display:none;
+    text-indent:-9999px;
+    background: url('../images/icon_top.png') no-repeat;
+}
+#scrollmenu {
+    position:absolute;
+    z-index:99999999;
+    top:100px;
+    left:0;
+    -webkit-transition: All 0.5s ease;
+    -moz-transition: All 0.5s ease;
+    -o-transition: All 0.5s ease;
+    -ms-transition: All 0.5s ease;
+    transition: All 0.5s ease;}
+#scrollmenu a {
+    display:block;
+    color:transparent;
+    text-decoration:none;
+    background:rgba(0, 0, 0, 0.4);
+    margin-bottom:1px;
+}
+#scrollmenu:hover a:hover {
+    display:block;
+    background:steelblue;
+ }
+ #scrollmenu a img {
+     display:inline-block;
+     vertical-align: middle;
+     padding: 12px;
+     height: 22px;
+ }
+ #scrollmenu a b {
+     display:inline-block;
+     vertical-align: middle; 
+     width:0px; overflow: hidden;
+     font-size:14px; 
+     font-weight:normal;
+     height:19px; padding:13px 0;
+     -webkit-transition: All 0.5s ease;
+     -moz-transition: All 0.5s ease;
+     -o-transition: All 0.5s ease;
+     -ms-transition: All 0.5s ease;
+     transition: All 0.5s ease; 
+     white-space:nowrap; }
+ #scrollmenu:hover a{
+     background:rgba(50, 50, 50, 0.95);
+ }
+ #scrollmenu:hover a b {
+     width:auto; 
+     -webkit-transition: All 0.5s ease; 
+     -moz-transition: All 0.5s ease; 
+     -o-transition: All 0.5s ease; 
+     -ms-transition: All 0.5s ease;
+     transition: All 0.5s ease; 
+     color:white; margin:0 30px 0 5px;
+ }
+ #scrollmenu:hover a img {}
+ #scrollmenu a:hover img {background:steelblue;}
+ @media screen and (max-width: 550px) {#scrollmenu{display:none;}}
+
+#center_side {
+    min-height: 475px;
+    margin: 0px;
+    padding: 0px;
+    z-index: 2;
+} 
+
+footer {
+    width: 100%;
+    height: 100px; 
+    background-color: #172e4a;
+    font-family: Playfair;
+    color: white;
+    text-align: left;
+    font-size: 1.3 em;
+    font-family: cursive;
+    float: right;
+    float: left;
+}
+footer ul li b {
+    font-family: Playfair;
+    font-size: 18px;
+    color: #ed8409;
+    font-size: 18px;
+}
+footer ul li a {
+    color: white;
+    font-family: Playfair;
+    text-decoration: none;
+}
+footer ul li a:hover {
+    color: silver;
+    font-size: 18px;
+}

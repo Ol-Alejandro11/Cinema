@@ -1,0 +1,16 @@
+.cinemaTables tr td {
+    border: 2px solid blue;
+    padding: 5px;
+    margin-bottom: 15px;
+    
+}
+.frame {
+    border: 3px double #6b60ef;
+    width: 900px;
+    margin: 25px;
+    padding: 25px;
+    
+}
+h2 {
+    font-size: 20px;
+}
